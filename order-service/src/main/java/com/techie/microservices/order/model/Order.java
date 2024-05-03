@@ -1,4 +1,4 @@
-package com.techie.microservices.orderservice.model;
+package com.techie.microservices.order.model;
 
 import java.math.BigDecimal;
 import jakarta.persistence.*;
