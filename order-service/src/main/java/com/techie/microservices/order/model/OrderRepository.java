@@ -1,4 +1,4 @@
-package com.techie.microservices.orderservice.model;
+package com.techie.microservices.order.model;
 
 import com.techie.microservices.order.model.Order;
 import org.springframework.data.jpa.repository.JpaRepository;

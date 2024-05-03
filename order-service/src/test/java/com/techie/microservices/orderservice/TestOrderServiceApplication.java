@@ -7,6 +7,8 @@ import org.springframework.context.annotation.Bean;
 import org.testcontainers.containers.MySQLContainer;
 import org.testcontainers.utility.DockerImageName;
 
+import com.techie.microservices.order.OrderServiceApplication;
+
 @TestConfiguration(proxyBeanMethods = false)
 public class TestOrderServiceApplication {
 
