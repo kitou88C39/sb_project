@@ -8,4 +8,5 @@ services:
     ports:
       - '3306:3306'
     volumes:
-      - ./data:/data/db
+      - ./maysql:/var/lib/mysql
+      - ./docker/mysql:/var/init.sql
