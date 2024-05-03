@@ -1,9 +1,9 @@
 package com.techie.microservices.orderservice.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
@@ -11,6 +11,10 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 public class Order {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.INDENTITY)
 
 }
