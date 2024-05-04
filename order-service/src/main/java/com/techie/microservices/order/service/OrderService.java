@@ -11,6 +11,7 @@ import java.util.UUID;
 @Service
 @RequiredArgsConstructor
 public class OrderService {
+
     private final OrderRepository orderRepository;
 
     public void placeOrder(OrderRequest orderRequest) {
@@ -19,7 +20,7 @@ public class OrderService {
         order.setPrice(orderRequest.price());
         order.setSkuCode(orderRequest.skuCode());
         order.setQuantity(orderRequest.quantity());
-
+        orderRepository.save(order);
     }
 
 }
