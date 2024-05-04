@@ -6,8 +6,7 @@ services:
     ports:
       - '3306:3306'
     environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: password
-      MONGO_INITDB_DATABASE: product-service
+      MYSQL_ROOT_PASSWORD: mysql
     volumes:
-      - ./data:/data/db
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./docker/mysql/data:/var/lib/mysql
