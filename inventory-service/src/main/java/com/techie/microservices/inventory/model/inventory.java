@@ -18,5 +18,8 @@ import lombok.Setter;
 public class inventory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String skuCode;
+    private Integer quantity;
 
 }
