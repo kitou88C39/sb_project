@@ -1,6 +1,8 @@
 package com.techie.microservices.inventory.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,5 +16,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class inventory {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
 }
