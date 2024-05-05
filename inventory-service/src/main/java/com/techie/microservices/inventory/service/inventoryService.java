@@ -7,4 +7,9 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class inventoryService {
 
+    private final InventortRepository inventortRepository;
+
+    public boolean isInStock(String skuCode, Integer quantity) {
+
+    }
 }
