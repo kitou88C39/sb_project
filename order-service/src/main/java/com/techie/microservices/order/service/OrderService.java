@@ -3,6 +3,7 @@ package com.techie.microservices.order.service;
 import com.techie.microservices.order.dto.OrderRequest;
 import com.techie.microservices.order.model.Order;
 import com.techie.microservices.order.model.OrderRepository;
+import com.techie.microservices.order.client.InventoryClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
