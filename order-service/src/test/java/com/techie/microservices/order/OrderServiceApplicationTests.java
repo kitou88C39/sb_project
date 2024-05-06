@@ -37,6 +37,11 @@ class OrderServiceApplicationTests {
 
 								}
 									""";
+
+	inventoryClientStub.stubInventoryCall();
+
+	var responseBodyString = RestAssured.given()
+
 	}
 
 }
