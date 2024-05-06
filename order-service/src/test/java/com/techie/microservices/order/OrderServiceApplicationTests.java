@@ -28,7 +28,15 @@ class OrderServiceApplicationTests {
 
 	@Test
 	void shouldSubmitOrder() {
-		String submitOrderJson = ""
+		String submitOrderJson = """
+
+								{
+				"skuCode":"iphone_15",
+				"price":10000,
+				"quantity":1
+
+								}
+									""";
 	}
 
 }
