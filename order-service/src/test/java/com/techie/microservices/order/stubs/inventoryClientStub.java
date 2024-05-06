@@ -1,5 +1,9 @@
 package com.techie.microservices.order.stubs;
 
-public class inventoryClient Stub {
-    
+public class inventoryClientStub {
+
+    public void stubInventoryCall(String skuCode, Integer quantity) {
+
+    }
+
 }
