@@ -1,5 +1,6 @@
 package com.techie.microservices.order;
 
+import com.example.library.ServiceConnection;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
@@ -17,6 +18,10 @@ class OrderServiceApplicationTests {
 	void setup() {
 		RestAssured.baseURI = "http://localhost";
 		RestAssured.port = port;
+	}
+
+	static {
+		MySQLContainer.start();
 	}
 
 }
