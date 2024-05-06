@@ -28,8 +28,7 @@ class OrderServiceApplicationTests {
 
 	@Test
 	void shouldSubmitOrder() {
-		int statusCode = 200;
-		assertEquals(200, statusCode);
+		String submitOrderJson = ""
 	}
 
 }
