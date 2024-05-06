@@ -1,4 +1,4 @@
-package com.techie.microservices.orderservice;
+package com.techie.microservices.order;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.test.context.TestConfiguration;
