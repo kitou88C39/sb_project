@@ -38,10 +38,13 @@ class OrderServiceApplicationTests {
 								}
 									""";
 
-	inventoryClientStub.stubInventoryCall();
+		inventoryClientStub.stubInventoryCall("iphone_15", 1);
 
-	var responseBodyString = RestAssured.given()
-
+		var responseBodyString = RestAssured.given();
+		.contentType("application/json")
+		.body(submitOrderJson)
+		.when()
+		.post("/api/order")
 	}
 
 }
