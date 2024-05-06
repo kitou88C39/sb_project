@@ -5,11 +5,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootTest(webEnvironment = SpringBootTest.webEnvironment.RANDOM_PORT)
-@AutoConfigureWireMock
+@AutoConfigureWireMock(port = 0)
 class OrderServiceApplicationTests {
 
-	public static void main(String[] args) {
-		SpringApplication.run(OrderServiceApplicationTests.class, args);
-	}
+	@ServiceConnection
+	static MySQLContainer MySQLContainer = new MySQLContainer("mysql:8.3.0");
+	@LovalServerPort
+	private Integer port;
 
 }
