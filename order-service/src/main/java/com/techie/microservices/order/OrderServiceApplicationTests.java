@@ -13,4 +13,10 @@ class OrderServiceApplicationTests {
 	@LovalServerPort
 	private Integer port;
 
+	@BeforeEach
+	void setup() {
+		RestAssured.baseURI = "http://localhost";
+		RestAssured.port = port;
+	}
+
 }
