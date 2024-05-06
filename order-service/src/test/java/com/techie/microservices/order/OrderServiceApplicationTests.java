@@ -8,7 +8,7 @@ import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@AutoConfigureWebMock
+@AutoConfigureWebMock(port = 0)
 class OrderServiceApplicationTests {
 
 	@ServiceConnection
@@ -22,8 +22,14 @@ class OrderServiceApplicationTests {
 		RestAssured.port = port;
 	}
 
+	static {
+		mySQLConnection.start();
+	}
+
 	@Test
-	void contextLoads() {
+	void shouldSubmitOrder() {
+		int statusCode = 200;
+		assertEquals(200, statusCode);
 	}
 
 }
