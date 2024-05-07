@@ -7,5 +7,9 @@ import org.springframework.context.annotation.Configuration;
 public class Routes {
 
     @Bean
+    public RoterFunction<ServerResponse> productServiceRoute(){
+        return GetewayRouterFunctions.route("product_service")
+
+    }
 
 }
