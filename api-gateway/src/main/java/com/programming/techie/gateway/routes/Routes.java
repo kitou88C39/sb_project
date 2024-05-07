@@ -1,5 +1,6 @@
 package com.programming.techie.gateway.routes;
 
+import org.springframework.cloud.gateway.server.mvc.handler.GetewayRouterFunctions;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
