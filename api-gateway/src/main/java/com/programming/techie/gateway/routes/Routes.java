@@ -1,8 +1,10 @@
 package com.programming.techie.gateway.routes;
 
 import org.springframework.cloud.gateway.server.mvc.handler.GetewayRouterFunctions;
+import org.springframework.cloud.gateway.server.mvc.handler.HandlerFunctions;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.function.RequestPredicates;
 import org.springframework.web.servlet.function.RoterFunction;
 import org.springframework.web.servlet.function.ServerResponse;
 
