@@ -25,4 +25,10 @@ public class Routes {
                 .build();
     }
 
+    @Bean
+    public RoterFunction<ServerResponse> orderServiceRoute() {
+        return GatewayRouterFunctions.route("order_service")
+                .route(RequestPredicates.path("/api/order"), HandlerFunctions.http("http://localhost:8081"))
+                .build();
+    }
 }
