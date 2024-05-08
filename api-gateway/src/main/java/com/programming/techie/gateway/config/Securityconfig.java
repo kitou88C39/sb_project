@@ -8,6 +8,9 @@ import org.springframework.boot.context.annotation.Configuration;
 public class Securityconfig {
 
     @Bean
-    public SecurityFilterChain securityFilterChain()
+    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity){
+        httpSecurity.authorizeHttpRequest(authorize -> authorize.anyRequest()
+        )
+    }
 
 }
