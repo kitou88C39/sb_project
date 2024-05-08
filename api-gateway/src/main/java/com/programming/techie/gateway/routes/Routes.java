@@ -13,15 +13,15 @@ public class Routes {
 
     @Bean
     public RoterFunction<ServerResponse> productServiceRoute() {
-        return GetewayRouterFunctions.route("product_service")
+        return GatewayRouterFunctions.route("product_service")
                 .route(RequestPredicates.path("/api/product"), HandlerFunctions.http("http://localhost:8080"))
                 .build();
     }
 
     @Bean
-    public RoterFunction<ServerResponse> productServiceRoute() {
-        return GetewayRouterFunctions.route("product_service")
-                .route(RequestPredicates.path("/api/product"), HandlerFunctions.http("http://localhost:8080"))
+    public RoterFunction<ServerResponse> orderServiceRoute() {
+        return GatewayRouterFunctions.route("order_service")
+                .route(RequestPredicates.path("/api/order"), HandlerFunctions.http("http://localhost:8081"))
                 .build();
     }
 
