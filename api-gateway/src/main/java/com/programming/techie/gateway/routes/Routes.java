@@ -18,4 +18,11 @@ public class Routes {
                 .build();
     }
 
+    @Bean
+    public RoterFunction<ServerResponse> productServiceRoute() {
+        return GetewayRouterFunctions.route("product_service")
+                .route(RequestPredicates.path("/api/product"), HandlerFunctions.http("http://localhost:8080"))
+                .build();
+    }
+
 }
