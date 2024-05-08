@@ -12,10 +12,10 @@ import org.springframework.web.servlet.function.ServerResponse;
 public class Routes {
 
     @Bean
-    public RoterFunction<ServerResponse> productServiceRoute(){
+    public RoterFunction<ServerResponse> productServiceRoute() {
         return GetewayRouterFunctions.route("product_service")
-        .route(RequestPredicates.path("/api/product"), HandlerFunctions.http("http://localhost:8080"))
-
+                .route(RequestPredicates.path("/api/product"), HandlerFunctions.http("http://localhost:8080"))
+                .build();
     }
 
 }
